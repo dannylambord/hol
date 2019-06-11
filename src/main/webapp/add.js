@@ -1,4 +1,6 @@
 let dest = {
+    id : 0,
+    locId : 0,
     city : " ",
     country : " "
 }
@@ -28,4 +30,16 @@ function fetchData(type,ext,sen) {
     req.send(x);
         
     })
+}
+
+function addDest(){
+    submit();
+    let s = JSON.stringify(dest);
+   fetchData("POST","/destination",s).then((req)=>{ 
+console.log(req.responseText);
+})};
+
+function submit(){
+   dest.city = document.getElementById("city").value;
+    dest.country= document.getElementById("country").value;
 }
