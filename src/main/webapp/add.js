@@ -25,7 +25,7 @@ function fetchData(type,ext,sen) {
 
         };
             
-    req.open(type, "35.246.36.67:8080/hol-1.0/api" + ext);
+    req.open(type, "localhost:8080/hol-1.0/api" + ext);
     req.setRequestHeader("Content-Type","application/json");
     req.send(x);
         
